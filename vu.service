@@ -1,0 +1,12 @@
+[Unit]
+Description=Pixelflut VU meter
+
+[Service]
+ExecStart=/usr/bin/python3 /opt/vu/vu.py
+Environment=PYTHONUNBUFFERED=1
+Restart=on-failure
+Type=notify
+User=pi
+
+[Install]
+WantedBy=default.target
